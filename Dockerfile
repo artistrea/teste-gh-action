@@ -29,9 +29,9 @@ ENV HOSTNAME "0.0.0.0"
 
 # sim, sem build de verdade, taca-lhe node_modules
 COPY --from=deps /app/node_modules ./node_modules
-COPY --from=base /app/public ./public
-COPY --from=base /app/server.js ./server.js
-COPY --from=base /app/start.sh ./start.sh
+COPY public ./public
+COPY server.js ./server.js
+COPY start.sh ./start.sh
 
 RUN chmod +x ./start.sh
 CMD ["./start.sh"]
