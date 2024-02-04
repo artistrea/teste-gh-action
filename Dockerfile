@@ -32,6 +32,7 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY public ./public
 COPY server.js ./server.js
 COPY start.sh ./start.sh
+COPY package.json ./package.json
 
 RUN chmod +x ./start.sh
-CMD ["./start.sh"]
+CMD ["/app/start.sh"]
