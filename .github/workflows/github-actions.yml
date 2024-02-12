@@ -14,5 +14,5 @@ jobs:
           URL: "https://jsonplaceholder.typicode.com/posts"
           BODY: '{"action": "build", "name": 1 }'
         run: |
-          curl -X POST \
+          curl -X GET \
             "$URL"
