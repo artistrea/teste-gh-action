@@ -10,9 +10,11 @@ jobs:
     steps:
       - name: HTTP Request
         env:
-        #   URL: "https://deployer-microservice.structej.com"
-          URL: "https://jsonplaceholder.typicode.com/posts"
+          URL: "https://deployer-microservice.structej.com"
           BODY: '{"action": "build", "name": 1 }'
         run: |
-          curl -X GET \
+          curl -X POST \
+            -H "Content-Type: application/json" \
+            -H "X-Authorization: ${{secrets.API_KEY}}" \
+            -d "$BODY" \
             "$URL"
