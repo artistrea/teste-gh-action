@@ -7,7 +7,7 @@ networks:
 services:
   test-redeploy:
     image: structej/projetos:test-latest
-    build: https://github.com/artistrea/teste-gh-action.git#${BRANCH:-production}
+    build: https://github.com/artistrea/teste-gh-action.git#${BRANCH:-main}
     restart: always
     ports:
       - 3000
