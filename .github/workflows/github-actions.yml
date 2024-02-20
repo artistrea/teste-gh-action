@@ -11,7 +11,7 @@ jobs:
       - name: Request to Microservice
         env:
           URL: "https://deployer-microservice.structej.com"
-          BODY: '{"action": "build", "name": 1 }'
+          BODY: '{"action": "build", "id": 1 }'
         run: |
           curl -X POST \
             -H "Content-Type: application/json" \
